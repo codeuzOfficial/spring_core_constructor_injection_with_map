@@ -1,0 +1,23 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <!--    Constructor injection with map -->
+    <bean id="question" class="dasturlash.uz.Question">
+        <constructor-arg name="id" value="1"/>
+        <constructor-arg name="text" value="Siz mazgimisiz?"/>
+        <constructor-arg>
+            <map>
+                <entry key="A" value="Ha"/>
+                <entry key="B" value="Yo'q"/>
+                <entry key="C" value="Bilmasam"/>
+                <entry key="D" value="Bo'lishi mumkun"/>
+                <entry key="E" value="Voy 100%"/>
+            </map>
+        </constructor-arg>
+    </bean>
+
+</beans>
